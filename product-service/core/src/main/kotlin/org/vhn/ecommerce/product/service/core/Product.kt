@@ -2,14 +2,14 @@ package org.vhn.ecommerce.product.service.core
 
 import jakarta.persistence.Entity
 import jakarta.persistence.Id
-import java.time.Instant
-import java.util.UUID
+import java.time.OffsetDateTime
+import java.util.*
 
 @Entity
 data class Product(
     @Id
     val id: UUID,
-    val created: Instant,
+    val created: OffsetDateTime,
     val name: String,
     val description: String,
 )

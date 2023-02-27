@@ -1,0 +1,12 @@
+type Query {
+    products : [Product]
+}
+
+scalar DateTime
+
+type Product {
+    id: ID!
+    created: DateTime!
+    name: String!
+    description: String!
+}

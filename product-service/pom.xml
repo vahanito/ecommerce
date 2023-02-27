@@ -26,6 +26,7 @@
         <postgresql.version>42.5.4</postgresql.version>
         <flyway.version>9.15.1</flyway.version>
         <spring-cloud-starter-sleuth.version>3.1.7</spring-cloud-starter-sleuth.version>
+        <graphql-java-extended-scalars.version>20.0</graphql-java-extended-scalars.version>
     </properties>
 
     <modules>
@@ -121,6 +122,11 @@
                 <version>${brave.version}</version>
                 <type>pom</type>
                 <scope>import</scope>
+            </dependency>
+            <dependency>
+                <groupId>com.graphql-java</groupId>
+                <artifactId>graphql-java-extended-scalars</artifactId>
+                <version>${graphql-java-extended-scalars.version}</version>
             </dependency>
         </dependencies>
     </dependencyManagement>
