@@ -1,4 +1,4 @@
-package org.vhn.ecommerce.product.service.core
+package org.vhn.ecommerce.product.service.core.product
 
 import org.springframework.context.ApplicationListener
 import org.springframework.context.event.ContextRefreshedEvent
@@ -17,9 +17,7 @@ class ProductService(val productRepository: ProductRepository) : ApplicationList
         saveProduct(Product(UUID.randomUUID(), OffsetDateTime.now(), "test product", "awesome product"))
     }
 
-    fun getProducts(): MutableIterable<Product> {
-        return productRepository.findAll()
-    }
+    fun getProducts() = productRepository.findAll();
 
 }
 

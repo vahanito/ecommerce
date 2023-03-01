@@ -1,4 +1,4 @@
-package org.vhn.ecommerce.product.service.core
+package org.vhn.ecommerce.product.service.core.product
 
 import jakarta.persistence.Entity
 import jakarta.persistence.Id

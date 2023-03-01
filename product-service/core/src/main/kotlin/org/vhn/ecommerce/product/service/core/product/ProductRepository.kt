@@ -1,9 +1,7 @@
-package org.vhn.ecommerce.product.service.core
+package org.vhn.ecommerce.product.service.core.product
 
 import org.springframework.data.repository.CrudRepository
-import org.springframework.graphql.data.GraphQlRepository
 import java.util.*
 
-@GraphQlRepository
 interface ProductRepository : CrudRepository<Product, UUID> {
 }

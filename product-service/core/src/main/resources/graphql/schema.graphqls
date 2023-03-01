@@ -1,5 +1,6 @@
 type Query {
     products : [Product]
+    sellers(name: String) : [ProductSeller]
 }
 
 scalar DateTime
@@ -9,4 +10,10 @@ type Product {
     created: DateTime!
     name: String!
     description: String!
+}
+
+type ProductSeller {
+    id: ID!
+    created: DateTime!
+    name: String!
 }
