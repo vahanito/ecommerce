@@ -3,8 +3,6 @@ package org.vhn.ecommerce.product.service.core.product
 import org.springframework.context.ApplicationListener
 import org.springframework.context.event.ContextRefreshedEvent
 import org.springframework.stereotype.Service
-import java.time.OffsetDateTime
-import java.util.*
 
 @Service
 class ProductService(val productRepository: ProductRepository) : ApplicationListener<ContextRefreshedEvent> {
@@ -14,7 +12,7 @@ class ProductService(val productRepository: ProductRepository) : ApplicationList
     }
 
     override fun onApplicationEvent(event: ContextRefreshedEvent) {
-        saveProduct(Product(UUID.randomUUID(), OffsetDateTime.now(), "test product", "awesome product"))
+//        saveProduct(Product(9, OffsetDateTime.now(), "test product", "awesome product"))
     }
 
     fun getProducts() = productRepository.findAll();

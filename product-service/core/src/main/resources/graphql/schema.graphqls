@@ -10,10 +10,19 @@ type Product {
     created: DateTime!
     name: String!
     description: String!
+    productPricingList: [ProductPricing]
 }
 
 type ProductSeller {
     id: ID!
     created: DateTime!
     name: String!
+}
+
+type ProductPricing {
+    id: ID!
+    created: DateTime!
+    price: Float!
+    product: Product!
+    seller: ProductSeller!
 }
